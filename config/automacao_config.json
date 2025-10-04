@@ -1,0 +1,12 @@
+{
+  "empresa": {
+    "uf": "SC",
+    "regime": "simples_nacional"
+  },
+  "cliente_ficticio": {
+    "cnpj": "11.222.333/0001-44",
+    "razao_social": "EMPRESA TESTE INDUSTRIALIZACAO LTDA"
+  },
+  "modo": "teste",
+  "transmitir_sefaz": false
+}
