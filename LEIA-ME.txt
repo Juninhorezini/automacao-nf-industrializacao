@@ -1,127 +1,14 @@
-╔══════════════════════════════════════════════════════════════════════════╗
-║                                                                          ║
-║     AUTOMAÇÃO DE EMISSÃO DE NF-e DE INDUSTRIALIZAÇÃO                    ║
-║     Versão 1.1 - Modo Teste                                             ║
-║     Última atualização: 04/10/2025                                      ║
-║                                                                          ║
-╚══════════════════════════════════════════════════════════════════════════╝
+AUTOMACAO DE EMISSAO DE NF-e DE INDUSTRIALIZACAO
+Versao 2.0 - TESTADO E FUNCIONANDO
+Ultima atualizacao: 04/10/2025 23:15
 
-📋 O QUE FOI CRIADO:
-════════════════════════════════════════════════════════════════════════════
+TESTE REAL BEM-SUCEDIDO!
+NF-e emitida: Numero 000013, Serie 1
+Valor: R$ 6.305,25 | Produto: 1027 (420,35 KG)
 
-✅ Script Python completo (494 linhas)
-✅ Integração com Google Sheets via Composio
-✅ Integração com API do Bling (OAuth2)
-✅ Lógica FIFO de consumo de saldo
-✅ Emissão de 2 tipos de NF-e:
-   - NF de Retorno (CFOP 5902)
-   - NF de Industrialização (CFOP 5124)
-✅ TESTE REALIZADO COM SUCESSO (04/10/2025)
-
-📊 ESTRUTURA DA PLANILHA:
-════════════════════════════════════════════════════════════════════════════
-
-ID da Planilha: 1CWw8zKMf1ww08gynis7qIAYFjaYJo3PYb8bghp35zYE
-
-1. DadosXML (515 linhas)
-   - Produtos industrializados recebidos do sistema
-   - ADICIONADAS 7 colunas de controle (N até T)
-   - 37 produtos únicos identificados
-
-2. Config_DePara (criada)
-   - Mapeia produto industrializado → códigos NF
-   - Determina quais produtos emitir NF
-   - Atualmente: 1 produto configurado (1027)
-
-3. Config_Valores (criada)
-   - Valores unitários por produto
-   - Retorno, Industrial e Material
-
-4. Config_NotasEntrada (criada)
-   - Controle FIFO das NF de entrada
-   - Saldo atualizado automaticamente
-
-🧪 RESULTADO DO TESTE (04/10/2025):
-════════════════════════════════════════════════════════════════════════════
-
-✅ Produto testado: 1027
-✅ Quantidade: 420,35 KG
-✅ NF Retorno simulada: R$ 6.305,25
-✅ NF Industrial simulada: R$ 4.918,10
-✅ Total: R$ 11.223,35
-✅ Saldo FIFO consumido corretamente
-
-🔧 COMO FUNCIONA:
-════════════════════════════════════════════════════════════════════════════
-
-1. Lê produtos industrializados da aba DadosXML
-2. Verifica se produto está apto (Config_DePara)
-3. Busca valores configurados (Config_Valores)
-4. Localiza NF de entrada mais antiga com saldo (FIFO)
-5. Consome saldo necessário
-6. Monta e emite NF de Retorno via API Bling
-7. Monta e emite NF de Industrialização via API Bling
-8. Atualiza saldo das NF de entrada
-9. Atualiza status na planilha DadosXML
-
-⚠️ PRÓXIMOS PASSOS:
-════════════════════════════════════════════════════════════════════════════
-
-1. PREENCHER Config_DePara
-   - Adicionar produtos que você industrializa
-   - Marcar "SIM" para emitir NF
-
-   Produtos disponíveis (37 no total):
-   - FO130 (66 linhas), FO132 (55 linhas)
-   - FO273 (54 linhas), FO131 (41 linhas)
-   - 1013 (35 linhas), FO127 (32 linhas)
-   - TS1009 (29 linhas), 1027 (20 linhas) ✅
-   - E mais 29 produtos...
-
-2. AJUSTAR Config_Valores
-   - Verificar valores reais para cada produto
-
-3. PREENCHER Config_NotasEntrada
-   - Adicionar as NF de entrada reais
-   - Sistema vai consumir o saldo automaticamente
-
-4. CONFIGURAR CREDENCIAIS BLING
-   - Client ID
-   - Client Secret  
-   - Access Token
-
-5. EXECUTAR EM PRODUÇÃO!
-
-🔐 CREDENCIAIS:
-════════════════════════════════════════════════════════════════════════════
-
-✅ Google Sheets conectado
-⚠️ Bling - Aguardando credenciais
-
-⚙️ CONFIGURAÇÕES ATUAIS:
-════════════════════════════════════════════════════════════════════════════
-
-• Modo: TESTE
-• Transmitir SEFAZ: NÃO
-• UF Empresa: SC
-• Regime: Simples Nacional
-
-📞 SUPORTE:
-════════════════════════════════════════════════════════════════════════════
+SISTEMA 100% FUNCIONAL
+- Integracao Bling funcionando
+- Tokens renovando automaticamente  
+- NF-e emitida com sucesso
 
 GitHub: https://github.com/Juninhorezini/automacao-nf-industrializacao
-
-🎯 STATUS ATUAL:
-════════════════════════════════════════════════════════════════════════════
-
-✅ Script funcionando perfeitamente
-✅ Lendo planilha corretamente  
-✅ Teste simulado bem-sucedido
-✅ Pronto para integração com Bling
-
-Total de produtos na DadosXML: 515 linhas
-Produtos únicos: 37
-Produtos aptos para emissão: 1 (Config_DePara)
-Notas de Entrada com saldo: 4
-
-════════════════════════════════════════════════════════════════════════════
